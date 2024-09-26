@@ -11,6 +11,7 @@ include device/xiaomi/sm8550-common/BoardConfigCommon.mk
 
 # Display
 TARGET_SCREEN_DENSITY := 530
+TARGET_USE_YCRCB_CAMERA_ENCODE := true
 
 # Kernel Modules
 device_second_stage_modules := \
