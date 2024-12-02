@@ -15,9 +15,12 @@ TARGET_USE_YCRCB_CAMERA_ENCODE := true
 
 # Kernel Modules
 device_second_stage_modules := \
-    goodix_ts.ko \
-    xiaomi_touch.ko
+    wl2866d.ko \
+    wl2868c.ko \
+    xiaomi_touch.ko \
+    goodix_ts.ko
 
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES += $(addprefix $(KERNEL_PREBUILT_DIR)/vendor_dlkm/, $(device_second_stage_modules))
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD += $(device_second_stage_modules)
 BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD += $(device_second_stage_modules)
 
