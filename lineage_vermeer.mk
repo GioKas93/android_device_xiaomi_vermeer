@@ -6,6 +6,9 @@
 
 DEVICE_PATH := device/xiaomi/vermeer
 GAPPS_PATH  := vendor/gapps/arm64
+PRODUCT_SYSTEM_NAME := vermeer_global
+PRODUCT_SYSTEM_DEVICE := vermeer
+
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
@@ -35,8 +38,7 @@ $(call inherit-product, $(GAPPS_PATH)/arm64-vendor.mk)
 
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="vermeer_global-user 13 TKQ1.221114.001 V816.0.2.0.UNKMIXM release-keys" \
-    TARGET_DEVICE=vermeer \
-    TARGET_PRODUCT=vermeer_global
-
-BUILD_FINGERPRINT := POCO/vermeer_global/vermeer:13/TKQ1.221114.001/V816.0.2.0.UNKMIXM:user/release-keys
+    BuildDesc="vermeer_global-user 13 TKQ1.221114.001 V816.0.2.0.UNKMIXM release-keys" \
+    DeviceProduct=$(PRODUCT_SYSTEM_NAME) \
+    DeviceName=$(PRODUCT_SYSTEM_DEVICE) \
+    BuildFingerprint=POCO/vermeer_global/vermeer:13/TKQ1.221114.001/V816.0.2.0.UNKMIXM:user/release-keys
