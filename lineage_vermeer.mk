@@ -34,7 +34,7 @@ TARGET_BOOT_ANIMATION_RES := 1440
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 # Inherit Gapps configurations
-$(call inherit-product, $(GAPPS_PATH)/arm64-vendor.mk)
+$(call inherit-product-if-exists, $(GAPPS_PATH)/arm64-vendor.mk)
 
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
