@@ -38,7 +38,7 @@ $(call inherit-product-if-exists, $(GAPPS_PATH)/arm64-vendor.mk)
 
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="vermeer_global-user 13 TKQ1.221114.001 V816.0.2.0.UNKMIXM release-keys" \
+    BuildDesc="vermeer_global-user 13 TKQ1.221114.001 V816.0.11.0.UMCMIXM release-keys" \
     DeviceProduct=$(PRODUCT_SYSTEM_NAME) \
     DeviceName=$(PRODUCT_SYSTEM_DEVICE) \
-    BuildFingerprint=POCO/vermeer_global/vermeer:13/TKQ1.221114.001/V816.0.2.0.UNKMIXM:user/release-keys
+    BuildFingerprint=POCO/vermeer_global/vermeer:13/TKQ1.221114.001/V816.0.11.0.UMCMIXM:user/release-keys
