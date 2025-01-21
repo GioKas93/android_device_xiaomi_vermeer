@@ -5,7 +5,6 @@
 #
 
 DEVICE_PATH := device/xiaomi/vermeer
-GAPPS_PATH  := vendor/gapps/arm64
 PRODUCT_SYSTEM_NAME := vermeer_global
 PRODUCT_SYSTEM_DEVICE := vermeer
 
@@ -32,9 +31,7 @@ TARGET_BOOT_ANIMATION_RES := 1440
 
 # GMS
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
-
-# Inherit Gapps configurations
-$(call inherit-product-if-exists, $(GAPPS_PATH)/arm64-vendor.mk)
+WITH_GMS ?= true
 
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
