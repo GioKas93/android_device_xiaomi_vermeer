@@ -1,7 +1,0 @@
-# Copyright (C) 2024 Paranoid Android
-#
-# SPDX-License-Identifier: Apache-2.0
-
-on property:vendor.post_boot.parsed=1
-    # Disable THP
-    write /sys/class/touch/touch_dev/clicktouch_raw 0
